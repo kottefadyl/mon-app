@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Video Call</title>
+</head>
+<body>
+    <div id="call"></div>
+    <script src="https://unpkg.com/@daily-co/daily-js"></script>
+    <script>
+        const callFrame = window.DailyIframe.createFrame(document.getElementById('call'), {
+            showLeaveButton: true
+        });
+
+        // Remplacer par le lien de votre salle Daily
+        const roomUrl = "https://your-domain.daily.co/your-room";
+        callFrame.join({ url: roomUrl });
+    </script>
+</body>
+</html>
